@@ -5,6 +5,8 @@
  */
 
 import com.progmatic.labyrinthproject.Coordinate;
+import com.progmatic.labyrinthproject.LabyrinthImpl;
+import com.progmatic.labyrinthproject.RandomPlayer;
 import com.progmatic.labyrinthproject.enums.CellType;
 import com.progmatic.labyrinthproject.enums.Direction;
 import com.progmatic.labyrinthproject.exceptions.CellException;
@@ -16,6 +18,9 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -44,7 +49,7 @@ public class LabyrinthTest {
     }
     
     @Test
-    public void testSetSizeAndGetWidthHeight() {
+    public void testSetSizeAndGetWidthHeight() throws CellException {
         Labyrinth l = getLabyrinthImpl();
         assertEquals(-1, l.getWidth());
         assertEquals(-1, l.getHeight());
@@ -382,12 +387,15 @@ public class LabyrinthTest {
     
     // TODO
     private Labyrinth getLabyrinthImpl() {
-        return null;
+        LabyrinthImpl l = new LabyrinthImpl();
+        return l;
     }
+
     
     // TODO
     private Player getRandomPlayerImpl() {
-        return null;
+        RandomPlayer r = new RandomPlayer();
+        return r;
     }
     
     // TODO

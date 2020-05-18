@@ -47,7 +47,7 @@ public interface Labyrinth {
      * @param width The new width.
      * @param height The new height.
      */
-    void setSize(int width, int height);
+    void setSize(int width, int height) throws CellException;
     
     /**
      * Sets a given cell coordinates to a cell type.
